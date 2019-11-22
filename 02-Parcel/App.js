@@ -1,3 +1,3 @@
 import React from 'react'
 import Navbar from './components/Navbar';
-export default () => (<Navbar />)
+export default () => (<Navbar title="Mango Airlines" />)

@@ -31736,13 +31736,26 @@ if ("development" === 'production') {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = Navbar;
+exports.Navitem = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Navbar = function Navbar() {
+var Navitem = function Navitem(_ref) {
+  var props = Object.assign({}, _ref);
+  return _react.default.createElement("li", {
+    className: "nav-item"
+  }, _react.default.createElement("a", {
+    href: props.link,
+    className: "nav-link"
+  }, props.text));
+};
+
+exports.Navitem = Navitem;
+
+function Navbar() {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("nav", {
     className: "navbar navbar-expand-sm navbar-light bg-light"
   }, _react.default.createElement("a", {
@@ -31803,10 +31816,7 @@ var Navbar = function Navbar() {
     className: "btn btn-outline-success my-2 my-sm-0",
     type: "submit"
   }, "Search")))));
-};
-
-var _default = Navbar;
-exports.default = _default;
+}
 },{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
@@ -31822,12 +31832,19 @@ var _Navbar = _interopRequireDefault(require("./components/Navbar"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = function _default() {
-  return _react.default.createElement(_Navbar.default, null);
+  return _react.default.createElement(_Navbar.default, {
+    title: "Mango Airlines"
+  });
 };
 
 exports.default = _default;
 },{"react":"node_modules/react/index.js","./components/Navbar":"components/Navbar.js"}],"index.js":[function(require,module,exports) {
 "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Welcome = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -31836,6 +31853,12 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 var _App = _interopRequireDefault(require("./App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Welcome = function Welcome(props) {
+  return _react.default.createElement("h1", null, " Hello, ", props.name, " ");
+};
+
+exports.Welcome = Welcome;
 
 _reactDom.default.render(_react.default.createElement(_App.default, null), document.getElementById('app'));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js"}],"../../../../.nvm/versions/node/v10.16.3/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -31866,7 +31889,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61042" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49930" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
