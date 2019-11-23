@@ -31841,11 +31841,6 @@ exports.default = _default;
 },{"react":"node_modules/react/index.js","./components/Navbar":"components/Navbar.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Welcome = void 0;
-
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
@@ -31853,12 +31848,6 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 var _App = _interopRequireDefault(require("./App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Welcome = function Welcome(props) {
-  return _react.default.createElement("h1", null, " Hello, ", props.name, " ");
-};
-
-exports.Welcome = Welcome;
 
 _reactDom.default.render(_react.default.createElement(_App.default, null), document.getElementById('app'));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js"}],"../../../../.nvm/versions/node/v10.16.3/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -31889,7 +31878,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49930" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49507" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
